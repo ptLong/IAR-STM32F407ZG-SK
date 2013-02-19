@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>STM32F407ZG-SK Webserver Demo</title>
+</head>
+<style>
+  BODY { color: black;  margin-left: 2%; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px;}
+  table{ color: black;  font-family: Verdana; font-size=100%}
+  .heading_demo {
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+  }
+  .menuoption {
+    background-color : white;
+    color: black;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+  }
+</style>
+</head>
+<body style="" lang="EN-US" link="black" vlink="black">
+<table width="100%" bgcolor="#FFDE00">
+<tr>
+<td style="width : 136"><img src="images/iar_systems.jpg" border="0" height="83" width="136"/></td>
+<td class="heading_demo">STM32F407ZG-SK Webserver Demo</td>
+<tr>
+</table>
+<table width="100%" bgcolor="white">
+<tr>
+<td id="opt1" class="menuoption" onmouseover="style.backgroundColor='#FFDE00';" onmouseout="style.backgroundColor='#FFFFFF';"><a href="index.html">Home Page</a></td>
+<td id="opt2" class="menuoption" onmouseover="style.backgroundColor='#FFDE00';" onmouseout="style.backgroundColor='#FFFFFF';"><a href="leds.html">On-board LEDs control</a></td>
+<td id="opt3" class="menuoption" onmouseover="style.backgroundColor='#FFDE00';" onmouseout="style.backgroundColor='#FFFFFF';"><a href="adc.shtml">ADC Demo</a></td>
+<tr>
+</table>
+<br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;This page allows you to control the four LEDs: LED1, LED2, LED3 and LED4 located on
+the IAR-STM32F407ZG-SK board. To put on/off a LED you have to
+check/uncheck its corresponding checkbox. Then you have to click on
+"Send" button to submit the new LEDs state.
+<br><br><br>
+<form method="get" action="/leds.cgi" >
+<input value="1" name="led" type="checkbox">LED1<br>
+<input value="2" name="led" type="checkbox">LED2<br>
+<input value="3" name="led" type="checkbox">LED3<br>
+<input value="4" name="led" type="checkbox">LED4<br>
+<br>
+<input value="Send" type="submit">
+</form>
+</body></html>

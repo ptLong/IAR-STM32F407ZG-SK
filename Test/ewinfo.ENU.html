@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.w3.org/MarkUp/SCHEMA/xhtml11.xsd"
+     xml:lang="en">
+  <head>
+    <title>Information Center for ARM</title>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+    <link type="text/css" rel="stylesheet" media="all" href="file://$TOOLKIT_DIR$/doc/infocenter/style/ewic.css" />
+  </head>
+  <body>
+  <div id="topbanner"></div>
+  <div id="titlebanner_small">
+    <h2>Information Center for ARM</h2>
+  </div>
+  <div class="breadcrumb"><a href="$TOOLKIT_DIR$/doc/infocenter/index.ENU.html">Information Center for ARM</a> | EXAMPLES</div>
+  <div class="mainblock">
+   <h2>Example description</h2>
+
+   <pre>  <!--Insert readme.txt-->
+Test
+
+
+This manual describes the demonstration software running on the IAR 
+STM32F407zg-SK, which you can use to evaluate the capabilities of the microcontroller
+and the on-board peripherals.
+
+  
+Demonstration Package contents
+===============================
+
+The demonstration software package contains the following subfolders:
+
+- Test folder:
+The Test folder contains STM32F407ZG-SK peripheral tests that make up the core 
+of the demonstration. These tests demonstrate some capabilities of the 
+microcontroller.
+  
+- library folder
+The STM32F4xx_StdPeriph_Driver folder contains all the subdirectories and files that make 
+up the core of the STM32F4xxx Firmware library:
+  - inc subfolder contains the firmware library header files
+  - src subfolder contains the firmware library source files
+  
+- project folder
+project folder contains project for the EWARM toolchain (V6.20) that 
+compiles all the demonstration files.
+
+Demonstration description 
+==========================
+
+1. After power ON(*), there would be the "STM32F407ZG-SK" message and IAR and ST logos 
+displayed on LCD.
+
+2. After few seconds, The main Menu is displayed. You can switch between
+General purpose peripheral tests or Communication peripheral tests using
+Joystick key (J).
+
+The selected item's color is blue. you can use Joystick key (J) to navigate on different 
+menu and sub-menu items.
+
+3. If you choose Gen. purpose Periph (pressing Joystick key (J)), you will enter
+periph test sub-menu in which you can test STM32F407ZG IAR SK components:
+
+        
+    - Accelerometer     : Displaying the board position regardless of horizontal.
+    
+    - Potentiometer     : Changing the GLCD contrast by moving the potentiometer AN-TR.
+    
+    - Buzzer            : Generating Beep signal on the buzzer  .
+    
+    - Audio In/Out      : Play sounds through th headphone.
+    
+The continue... sub menu allows you to test remaining peripherals due to the 
+GLCD line numbers limit. Choosing the Continue... allows you testing:
+    
+    - LED               : Turning on Leds (STAT1..STAT4) and switch off Leds one by one.
+    
+    - Temperature Sensor: Using I2C temperature sensor to show temperature. 
+    
+    - Key Button        : Pressing Tamper Button allow display of "Tamper key pressed"  
+                          message display and LED (STAT1) is ON.      
+    
+3. If you choose Communication Periph (pressing Joystick key (J)), you can test:
+    
+    - RS232_1          : Using the USART1 to communicate with the hyperterminal with interactive
+                        messages on LCD.  
+    
+    - CAN loopback            : Performing a communication and data transfert between CAN1 an CAN2.  
+                     
+NOTE: 
+
+* Refer to IAR documentations on Power Supply ways.
+** After running tests you can press User key to exit, this allows you to return
+to Periph tests sub menu.
+*** Choosing Return allows go back to main Menu  
+****  The LCD and the Trace module have shared pins (LCD_RST and TRACED2).
+If you need to use the LCD and the Trace simultaneously please set 
+the Trace port width to 2 in the ETM settings. 
+
+How to use it
+============= 
+ - Open project at IAR-STM32F407ZG-SK\TEST\TEST.eww  
+ - Rebuild all files: Project->Rebuild all
+ - Load project image: Project->Debug
+ - Run program: Debug->Go(F5)
+   </pre>
+
+  </div>
+  </body>
+</html>
+

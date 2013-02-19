@@ -1,0 +1,55 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta http-equiv="refresh" content="1">
+<title>STM32F407ZG-SK Webserver Demo</title>
+</head>
+<style>  
+  BODY { color: black;  margin-left: 2%; font-family: Verdana, Arial, Helvetica, sans-serif; font-size=75%}
+  table{ color: black;  font-family: Verdana; font-size=100%}  
+  .heading_demo {
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+  }
+  .menuoption {
+    background-color : white;
+    color: black;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+  }
+</style>
+</head>
+<body style="" lang="EN-US" link="black" vlink="black">
+<table width="100%" bgcolor="#FFDE00">
+<tr>
+<td style="width : 136"><img src="images/iar_systems.jpg" border="0" height="83" width="136"/></td>
+<td class="heading_demo">STM32F407ZG-SK Webserver Demo</td>
+<tr>
+</table>
+<table width="100%" bgcolor="white">
+<tr>
+<td id="opt1" class="menuoption" onmouseover="style.backgroundColor='#FFDE00';" onmouseout="style.backgroundColor='#FFFFFF';"><a href="index.html">Home Page</a></td>
+<td id="opt2" class="menuoption" onmouseover="style.backgroundColor='#FFDE00';" onmouseout="style.backgroundColor='#FFFFFF';"><a href="leds.html">On-board LEDs control</a></td>
+<td id="opt3" class="menuoption" onmouseover="style.backgroundColor='#FFDE00';" onmouseout="style.backgroundColor='#FFFFFF';"><a href="adc.shtml">ADC Demo</a></td>
+<tr>
+</table>
+<br><br>
+<span style="font-size: 14px; font-family: Verdana;">
+&nbsp;&nbsp;&nbsp;&nbsp;This page allows you
+to get continuously the ADC1 Channel 10 analog input converted value.
+This ADC Channel is connected to the IAR-STM32F407ZG-SK board's
+potentiometer. The ADC value is updated, automatically, each 1 second with
+the last converted ADC Channel 10 value. You could check this by
+changing the potentiometer position and check that the ADC value is updated, by an
+automatic refresh of this 
+<br><br><br>
+<table border="0" cellpadding="5" cellspacing="1">
+<tr>
+<td style="font-size: 14px; font-family: Verdana;font-weight: bold;">ADC Converted Value: </td>
+<td style="font-size: 14px; font-family: Verdana;"><!--#t--> mv</td>
+</tr>
+</table>
+</body></html>

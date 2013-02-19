@@ -1,0 +1,79 @@
+<html>
+<head>
+<title>STM32F407ZG-SK Webserver Demo</title>
+</head>
+<style>    
+  BODY { color: black;  margin-left: 2%; font-family: Verdana, Arial, Helvetica, sans-serif; font-size=75%}
+  table{ color: black;  font-family: Verdana; font-size=100%} 
+  .heading_demo {
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+  }
+  .menuoption {
+    background-color : white;
+    color: black;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+  }
+</style>
+</head>
+<body style="" lang="EN-US" link="black" vlink="black">
+<table width="100%" bgcolor="#FFDE00">
+<tr>
+<td style="width : 136"><img src="images/iar_systems.jpg" border="0" height="83" width="136"/></td>
+<td class="heading_demo">STM32F407ZG-SK Webserver Demo</td>
+<tr>
+</table>
+<table width="100%" bgcolor="white">
+<tr>
+<td id="opt1" class="menuoption" onmouseover="style.backgroundColor='#FFDE00';" onmouseout="style.backgroundColor='#FFFFFF';"><a href="index.html">Home Page</a></td>
+<td id="opt2" class="menuoption" onmouseover="style.backgroundColor='#FFDE00';" onmouseout="style.backgroundColor='#FFFFFF';"><a href="leds.html">On-board LEDs control</a></td>
+<td id="opt3" class="menuoption" onmouseover="style.backgroundColor='#FFDE00';" onmouseout="style.backgroundColor='#FFFFFF';"><a href="adc.shtml">ADC Demo</a></td>
+<tr>
+</table>
+
+<br/><br/>
+<span style="font-size: 14px; font-family: Verdana;">
+ &nbsp;&nbsp;&nbsp;&nbsp;This demo shows how to use the IAR-STM32F407ZG-SK board as
+ an embedded webserver. It is based on lwIP TCP/IP stack v1.3.2 and features
+ three HTML pages for interacting with the IAR-STM32F407ZG-SK board.<br/>
+ &nbsp;&nbsp;&nbsp;&nbsp;You will be able to control the four LEDs on 
+ the board through the browser and you will be able to get 
+ continuously, each 1 second, the ADC Channel 10 converted value displayed 
+ on the web page of your browser. The demo can be
+ configured to use Static IP or DHCP at compile time. The address that is selected will 
+ be shown on the on-board LCD display. 
+ <br/>
+ 
+ <br/>
+ <center>* * *</center>
+ <br/>
+ <span style="font-size: 14px; font-family: Verdana;">
+ &nbsp;&nbsp;&nbsp;&nbsp;lwIP, pronounced lightweight IP, 
+ is an open source TCP/IP stack developed by
+Adam Dunkels at the Swedish Institute of Computer Science and is
+maintained now by a world wide community of developers.<br>
+<br>
+lwIP features:<br>
+<br>
+- IP (Internet Protocol) including packet forwarding over multiple
+network interfaces<br>
+- ICMP (Internet Control Message Protocol) for network maintenance and
+debugging<br>
+- UDP (User Datagram Protocol) including experimental UDP-lite
+extensions<br>
+- TCP (Transmission Control Protocol) with congestion control, RTT
+estimation and fast recovery/fast retransmit<br>
+- Specialized raw API for enhanced performance<br>
+- Optional Berkeley-alike socket API<br>
+- DHCP (Dynamic Host Configuration Protocol)<br>
+- PPP (Point-to-Point Protocol)<br>
+- ARP (Address Resolution Protocol) for Ethernet<br>
+<br>
+For more informations you can refer to the website: &nbsp;<a href="http://savannah.nongnu.org/projects/lwip/">http://savannah.nongnu.org/projects/lwip/
+</a><o:p></o:p></span></p>
+ 
+</body></html>
