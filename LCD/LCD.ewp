@@ -1850,6 +1850,12 @@
   <group>
     <name>app</name>
     <file>
+      <name>$PROJ_DIR$\..\..\..\stm32f4discovery_fw1\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\TIM_ComplementarySignals\GES_Solar_RTC.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\stm32f4discovery_fw1\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\TIM_ComplementarySignals\GES_Solar_RTC.h</name>
+    </file>
+    <file>
       <name>$PROJ_DIR$\app\iar_logo.c</name>
     </file>
     <file>

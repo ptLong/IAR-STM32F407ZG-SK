@@ -23,6 +23,12 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f4xx_it.h"
+#include "includes.h"
+
+
+
+
+
 
 extern void TimingDelay_Decrement(void);
 
@@ -34,6 +40,11 @@ extern void TimingDelay_Decrement(void);
 /* Private define ------------------------------------------------------------*/
 /* Private macro -------------------------------------------------------------*/
 /* Private variables ---------------------------------------------------------*/
+/* Private variables ---------------------------------------------------------*/
+extern __IO uint32_t PeriodValue;
+extern __IO uint32_t CaptureNumber;
+uint16_t tmpCC4[2] = {0, 0};
+
 /* Private function prototypes -----------------------------------------------*/
 /* Private functions ---------------------------------------------------------*/
 
@@ -145,6 +156,48 @@ void SysTick_Handler(void)
 /*  available peripheral interrupt handler's name please refer to the startup */
 /*  file (startup_stm32f4xx.s).                                               */
 /******************************************************************************/
+/******************************************************************************/
+/*                 STM32F4xx Peripherals Interrupt Handlers                   */
+/******************************************************************************/
+
+/**
+  * @brief  This function handles RTC Wakeup global interrupt request.
+  * @param  None
+  * @retval None
+  */
+void RTC_WKUP_IRQHandler(void)
+{
+  if(RTC_GetITStatus(RTC_IT_WUT) != RESET)
+  {
+    /* Toggle on LED1 */
+    STM_EVAL_LEDToggle(LED1);
+    RTC_ClearITPendingBit(RTC_IT_WUT);
+    EXTI_ClearITPendingBit(EXTI_Line22);
+  } 
+}
+
+/**
+  * @brief  This function handles TIM5 global interrupt request.
+  * @param  None
+  * @retval None
+  */
+void TIM5_IRQHandler(void)
+{
+  if (TIM_GetITStatus(TIM5, TIM_IT_CC4) != RESET)
+  {    
+    /* Get the Input Capture value */
+    tmpCC4[CaptureNumber++] = TIM_GetCapture4(TIM5);
+   
+    /* Clear CC4 Interrupt pending bit */
+    TIM_ClearITPendingBit(TIM5, TIM_IT_CC4);
+
+    if (CaptureNumber >= 2)
+    {
+      /* Compute the period length */
+      PeriodValue = (uint16_t)(0xFFFF - tmpCC4[0] + tmpCC4[1] + 1);
+    }
+  }
+}
 
 /**
   * @brief  This function handles PPP interrupt request.
