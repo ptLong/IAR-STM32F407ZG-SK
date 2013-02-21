@@ -1,6 +1,6 @@
 ###############################################################################
 #                                                                             #
-# IAR ELF Linker V6.40.2.53884/W32 for ARM              19/Feb/2013  14:36:04 #
+# IAR ELF Linker V6.40.2.53884/W32 for ARM              21/Feb/2013  14:47:19 #
 # Copyright 2007-2012 IAR Systems AB.                                         #
 #                                                                             #
 #    Output file  =  C:\Working\GES\MPPT\F4\STM32F4xx\IAR-STM32F407ZG-SK\LCD\ #
@@ -8,8 +8,6 @@
 #    Map file     =  C:\Working\GES\MPPT\F4\STM32F4xx\IAR-STM32F407ZG-SK\LCD\ #
 #                    Flash Debug\List\LCD.map                                 #
 #    Command line =  "C:\Working\GES\MPPT\F4\STM32F4xx\IAR-STM32F407ZG-SK\LCD #
-#                    \Flash Debug\Obj\GES_Solar_RTC.o"                        #
-#                    "C:\Working\GES\MPPT\F4\STM32F4xx\IAR-STM32F407ZG-SK\LCD #
 #                    \Flash Debug\Obj\Terminal_18_24x12.o"                    #
 #                    "C:\Working\GES\MPPT\F4\STM32F4xx\IAR-STM32F407ZG-SK\LCD #
 #                    \Flash Debug\Obj\Terminal_6_8x6.o"                       #
